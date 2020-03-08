@@ -5,6 +5,7 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
     private var mtlItemDB : tlItemDB? = null
+    private var mTlList = listOf<tlItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         mtlItemDB = tlItemDB.getInstance(this)
 
         val r = Runnable {
-
+            mTlList = mtlItemDB?.mtlDao()?.getAll()!!
         }
 
         val thread = Thread(r)
