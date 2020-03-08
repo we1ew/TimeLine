@@ -10,14 +10,14 @@ import androidx.room.PrimaryKey
 *   id    / tlTime  / tlLocation / tlMemo / tlPhoto / tlAudio / tlVideo
 * */
 
-@Entity(tableName = "tlItem")
+@Entity(tableName = "tlitem")
 class tlItem(@PrimaryKey(autoGenerate = true) var id: Long?,
-             @ColumnInfo(name = "tlTime") var tlTime: String,
-             @ColumnInfo(name = "tlLocation") var tlLocation: String,
-             @ColumnInfo(name = "tlMemo") var tlMemo: String?,
-             @ColumnInfo(name = "tlPhoto") var tlPhoto: String?,
-             @ColumnInfo(name = "tlAudio") var tlAudio: String?,
-             @ColumnInfo(name = "tlVideo") var tlVideo: String?
+             @ColumnInfo(name = "tltime") var tlTime: String,
+             @ColumnInfo(name = "tllocation") var tlLocation: String,
+             @ColumnInfo(name = "tlmemo") var tlMemo: String?,
+             @ColumnInfo(name = "tlphoto") var tlPhoto: String?,
+             @ColumnInfo(name = "tlaudio") var tlAudio: String?,
+             @ColumnInfo(name = "tlvideo") var tlVideo: String?
 ){
     constructor(): this(null,"","", "", "", "", "")
 }
